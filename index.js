@@ -24,6 +24,25 @@ var con = mysql.createConnection({
   database: 'cs361_hughesc3'
 });
 
+// User Account Creation and Authenticaton
+app.post('/createAccount', (req, res) => {
+  // Check if user already exists
+  db.query('SELECT * FROM users WHERE email="' + req.body.username + '"', (err, result) => {
+    if (result.length > 1) {
+      console.log(result)
+      res.send('Account already exists.')
+    } else {
+      // Add user to DB
+      let query = 'INSERT INTO users (firstname, lastname, email, password) VALUES ("' + req.body.firstName + '", "' + req.body.lastName + '", "' + req.body.userName + '", "' + req.body.password + ' ");'
+      db.query(query, (err, result) => {
+        res.send('Done!')
+      })
+    }
+  })
+})
+
+
+/*
 var queryString = 'SELECT * FROM users';
  
 con.query(queryString, function(err, rows, fields) {
@@ -33,6 +52,7 @@ con.query(queryString, function(err, rows, fields) {
         console.log('Post Titles: ', rows[i].email);
     }
 });
+*/
 
 /*
 con.connect(function(err){
