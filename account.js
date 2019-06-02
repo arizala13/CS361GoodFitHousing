@@ -12,7 +12,7 @@ document.getElementById('register').addEventListener('click', (event) => {
       }
     }
   }
-  xhttp.open('POST', 'http://flip1.engr.oregonstate.edu:9987/createAccount', true)
+  xhttp.open('POST', 'http://flip1.engr.oregonstate.edu:8921/createAccount', true)
   xhttp.setRequestHeader('Content-type', 'application/json')
   xhttp.send(JSON.stringify({
     email: document.getElementById('materialFormRegisterEmailEx').value,

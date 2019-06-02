@@ -12,7 +12,7 @@ document.getElementById('register').addEventListener('click', (event) => {
       }
     }
   }
-  xhttp.open('POST', 'http://flip1.engr.oregonstate.edu:9987/createAccount', true)
+  xhttp.open('POST', 'http://flip2.engr.oregonstate.edu:47429/createAccount', true)
   xhttp.setRequestHeader('Content-type', 'application/json')
   xhttp.send(JSON.stringify({
     userName: document.getElementById('emailInput').value,
@@ -21,13 +21,3 @@ document.getElementById('register').addEventListener('click', (event) => {
     lastName: document.getElementById('inputLastName').value,
   }))
 })
-
-/*
-if (getCookie('username').length > 0) {
-  let button = document.getElementById('mainButton')
-  button.setAttribute('data-toggle', '')
-  button.setAttribute('data-target', '')
-  button.setAttribute('href', 'flights.html')
-  button.textContent = 'Find a Flight'
-}
-*/
