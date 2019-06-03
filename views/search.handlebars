@@ -14,7 +14,47 @@
 		<li><a href="accountOptions">Account Options</a></li>
 	</ul>
 
-	<h1>Search</h1>
+	<h1>Search</h1><br>
+
+	<!--
+	<div>
+		<h2>{{title}}</h2>
+		<p>Scraper under construction. Your search will be run against this pre-populated list of facilities:</p><br>
+
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Category</th>
+				<th>ZIP Code</th>
+				<th>Street Address</th>
+				<th>Phone Number</th>
+			</thead>
+
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	-->
+
+	<div>
+		<form>
+			ZIP Code: <input type="text" name="zip" id="zip"><br>
+			<div>
+				<h3>Choose a facility type</h3>
+				<input type="radio" id="cat1" name="category" value="55" checked>
+				<label for="cat1">55+</label><br>
+				<input type="radio" id="cat2" name="category" value="apartments">
+				<label for="cat2">Senior Apartments</label><br>
+				<input type="radio" id="cat3" name="category" value="cohousing">
+				<label for="cat3">Co-housing</label><br>
+				<input type="radio" id="cat4" name="category" value="assisted">
+				<label for="cat4">Assisted living</label><br>
+				<input type="radio" id="cat5" name="category" value="nursing">
+				<label for="cat5">Nursing Homes</label><br>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
 
 
 </body>
