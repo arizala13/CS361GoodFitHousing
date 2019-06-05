@@ -47,6 +47,16 @@ div#HGnav li a:hover {
 	text-decoration: none;
 }
 
+.bulletList ul {
+	list-style-type: disk;
+    margin: 110;
+    padding: 110;
+    width: 1000px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+
 /* Change the link color on hover */
 li a:hover {
     background-color: #83adb5;;
