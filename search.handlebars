@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search page</title>
+
+	<link rel="stylesheet" type="text/css" href="css/otherPages.css" />
+</head>
+<body>
+
+	<p>Hello and welcome to our search page. Here we will help you find a facility that will be a great match for you and your lifestyle. Below you can select some options to get results. </p>
+
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="search">Search</a></li>
+		<li><a href="housingGuide">Housing Guide</a></li>
+		<li><a href="accountOptions">Account Options</a></li>
+	</ul>
+
+	<h1>Search</h1><br>
+
+	<!--
+	<div>
+		<h2>{{title}}</h2>
+		<p>Scraper under construction. Your search will be run against this pre-populated list of facilities:</p><br>
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Category</th>
+				<th>ZIP Code</th>
+				<th>Street Address</th>
+				<th>Phone Number</th>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	-->
+
+	<div>
+		<form>
+			<h3>ZIP Code</h3> <p>(this will search within a 20 mile radius)</p> <input type="text" name="zip" id="zip">
+			<div>
+			<div>
+				<h3>Facility type</h3>
+				<input type="radio" id="cat1" name="category" value="55">
+				<label for="cat1">55+</label><br>
+				<input type="radio" id="cat2" name="category" value="apartments">
+				<label for="cat2">Senior Apartments</label><br>
+				<input type="radio" id="cat3" name="category" value="cohousing">
+				<label for="cat3">Co-housing</label><br>
+				<input type="radio" id="cat4" name="category" value="assisted">
+				<label for="cat4">Assisted living</label><br>
+				<input type="radio" id="cat5" name="category" value="nursing">
+				<label for="cat5">Nursing Homes</label><br>
+			</div>
+			<div>
+				<h3>Price range</h3>
+				<input type="checkbox" id="price1" name="priceRange" value="level1"><label for="cat1">$</label><br>
+				<input type="checkbox" id="price2" name="priceRange" value="level2"><label for="cat2">$$</label><br>
+				<input type="checkbox" id="price3" name="priceRange" value="level3"><label for="cat3">$$$</label><br>
+				<input type="checkbox" id="price4" name="priceRange" value="level4"><label for="cat4">$$$$</label><br>
+				<input type="checkbox" id="price5" name="priceRange" value="level5"><label for="cat5">$$$$$</label><br>
+			</div>
+			<div>
+				<h3>Amenities</h3>
+				<input type="checkbox" name="amenity1" value="Housekeeping"> Housekeeping </label>
+				<input type="checkbox" name="amenity2" value="Car"> Medication management </label>
+				<input type="checkbox" name="amenity3" value="Medication"> Laundry services<br>
+				<input type="checkbox" name="amenity4" value="Nurse"> 24/7 Nurse </label>
+				<input type="checkbox" name="amenity5" value="Entertainment"> Entertainment </label>
+				<input type="checkbox" name="amenity6" value="Shuttle"> Shuttle buses<br>
+				<input type="checkbox" name="amenity7" value="Social"> Social activities </label>
+				<input type="checkbox" name="amenity8" value="Security"> Security services </label>
+			</div>
+				<div>
+				<h3>Rating</h3>
+				<input type="checkbox" id="rating5" name="priceRange" value="level1"> <label for="rating5">5 stars</label><br>
+				<input type="checkbox" id="rating4" name="priceRange" value="level2"> <label for="rating4">4 stars</label><br>
+				<input type="checkbox" id="rating3" name="priceRange" value="level3"> <label for="rating3">3 stars</label><br>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+
+
+</body>
+</html>
