@@ -19,6 +19,34 @@ li a {
     font-size: 20px;
 }
 
+div#HGnav ul {
+	background-color: transparent;
+    list-style-type:none;
+    height:20px;
+    text-align:center;
+    width: 25%;
+	min-width: 750px;
+    display: table;
+}
+
+div#HGnav ul li {
+    margin-left: 1%;
+	border: 1px solid grey;
+	border-radius: 10px;
+    display: table-cell;
+}
+
+div#HGnav li a {
+	text-decoration: none;
+	color: #000;
+}
+
+div#HGnav li a:hover {
+	border-radius: 9px;
+    background-color: #83adb5;
+	text-decoration: none;
+}
+
 /* Change the link color on hover */
 li a:hover {
     background-color: #83adb5;;
