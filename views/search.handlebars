@@ -7,8 +7,6 @@
 </head>
 <body>
 
-	<p>Hello and welcome to our search page. Here we will help you find a facility that will be a great match for you and your lifestyle. Below you can select some options to get results. </p>
-
 	<ul>
 		<li><a href="/">Home</a></li>
 		<li><a href="search">Search</a></li>
@@ -18,40 +16,19 @@
 
 	<h1>Search</h1><br>
 
-	<!--
-	<div>
-		<h2>{{title}}</h2>
-		<p>Scraper under construction. Your search will be run against this pre-populated list of facilities:</p><br>
-		<table>
-			<thead>
-				<th>Name</th>
-				<th>Category</th>
-				<th>ZIP Code</th>
-				<th>Street Address</th>
-				<th>Phone Number</th>
-			</thead>
-			<tbody>
-			</tbody>
-		</table>
-	</div>
-	-->
+	<p>Hello and welcome to our search page. Here we will help you find a facility that will be a great match for you and your lifestyle. Below you can select some options to get results. </p>
 
 	<div>
-		<form>
+		<form action="/searchResults" method="post">
 			<h3>ZIP Code</h3> <p>(this will search within a 20 mile radius)</p> <input type="text" name="zip" id="zip">
 			<div>
 			<div>
 				<h3>Facility type</h3>
-				<input type="radio" id="cat1" name="category" value="55">
-				<label for="cat1">55+</label><br>
-				<input type="radio" id="cat2" name="category" value="apartments">
-				<label for="cat2">Senior Apartments</label><br>
-				<input type="radio" id="cat3" name="category" value="cohousing">
-				<label for="cat3">Co-housing</label><br>
-				<input type="radio" id="cat4" name="category" value="assisted">
-				<label for="cat4">Assisted living</label><br>
-				<input type="radio" id="cat5" name="category" value="nursing">
-				<label for="cat5">Nursing Homes</label><br>
+				<input type="radio" id="cat1" name="category" value="55"><label for="cat1">55+</label><br>
+				<input type="radio" id="cat2" name="category" value="apartments"><label for="cat2">Senior Apartments</label><br>
+				<input type="radio" id="cat3" name="category" value="cohousing"><label for="cat3">Co-housing</label><br>
+				<input type="radio" id="cat4" name="category" value="assisted"><label for="cat4">Assisted living</label><br>
+				<input type="radio" id="cat5" name="category" value="nursing"><label for="cat5">Nursing Homes</label><br>
 			</div>
 			<div>
 				<h3>Price range</h3>
@@ -78,7 +55,7 @@
 				<input type="checkbox" id="rating4" name="priceRange" value="level2"> <label for="rating4">4 stars</label><br>
 				<input type="checkbox" id="rating3" name="priceRange" value="level3"> <label for="rating3">3 stars</label><br>
 			</div>
-			<button type="submit">Submit</button>
+			<button type="submit" id="searchSubmit">Submit</button>
 		</form>
 	</div>
 

@@ -38,7 +38,33 @@ app.get('/accountOptions',function(req,res){
 });
 
 app.get('/search',function(req,res){
+  /*
+  document.getElementById("searchSubmission").addEventListener("click", function(){
+
+
+  });
+  */
+  
   res.render('search');
+  
+  /*
+  function addClicks(){
+    document.getElementById('register').addEventListener('click', function(event){
+      event.preventDefault();
+
+      let xhttp = new XMLHttpRequest()
+
+      xhttp.open('GET', '/searchResults', false)
+
+      xhttp.setRequestHeader('Content-type', 'application/json')
+
+      xhttp.send(JSON.stringify({
+        zip: document.getElementById('zip').value,
+        category: document.getElementById('cat5').value,
+      }));
+    });
+  }
+  */
 });
 
 app.get('/searchResults',function(req,res){
@@ -51,7 +77,23 @@ app.get('/searchResults',function(req,res){
     console.log(results);
 
     res.render('searchResults', {
-      title: "Results DB Dump",
+      title: "GET DB Dump",
+      results: results
+    });
+  });
+});
+
+app.post('/searchResults',function(req,res){
+  var queryText = 'SELECT f.name, c.name AS category, f.address, f.zip, f.phone FROM facilities AS f INNER JOIN categories AS c ON f.categoryid = c.id';
+  
+  mysql.pool.query(queryText, function(error, results, fields){
+    if(error) throw error;
+
+    console.log("Query results: ");
+    console.log(results);
+
+    res.render('searchResults', {
+      title: "POST DB DUMP",
       results: results
     });
   });
