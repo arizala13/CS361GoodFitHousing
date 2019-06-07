@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Page</title>
+
+	<link rel="stylesheet" type="text/css" href="css/otherPages.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="account.js" defer></script>
+	<script src="cookies.js" defer></script>
+	<script src="submitAccount.js" defer></script>
+	<script src="index.js" defer></script>
+</head>
+
+
+    <ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="search">Search</a></li>
+		<li><a href="housingGuide">Housing Guide</a></li>
+		<li><a href="add">Login</a></li>
+		<li><a href="/home">Account Options</a></li>
+	</ul>
+
+	<h1>Account</h1>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="first_name" id="first-name" placeholder="First Name" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="last_name" id="last-name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="number" class="form-control" name="number" id="number" placeholder="Number" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <select id="position" name="position" class="form-control" required>
+                        <option selected disabled>Choose position</option>
+						<option>55+</option>
+						<option>Senior Apartments</option>
+						<option>Co-housing</option>
+						<option>Assisted living</option>
+						<option>Nursing Homes</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="player-img"><b>Your Image</b></label><br>
+                    <input type="file" name="image" id="player-img" class="" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Register</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
