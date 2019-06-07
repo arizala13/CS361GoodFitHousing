@@ -41,6 +41,22 @@ app.get('/search',function(req,res){
   res.render('search');
 });
 
+app.get('/searchResults',function(req,res){
+  var queryText = 'SELECT f.name, c.name AS category, f.address, f.zip, f.phone FROM facilities AS f INNER JOIN categories AS c ON f.categoryid = c.id';
+  
+  mysql.pool.query(queryText, function(error, results, fields){
+    if(error) throw error;
+
+    console.log("Query results: ");
+    console.log(results);
+
+    res.render('searchResults', {
+      title: "Results DB Dump",
+      results: results
+    });
+  });
+});
+
 app.get('/housingGuide',function(req,res){
   res.render('housingGuide');
 });
