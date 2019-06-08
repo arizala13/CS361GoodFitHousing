@@ -10,29 +10,32 @@
 		<li><a href="/">Home</a></li>
 		<li><a href="search">Search</a></li>
 		<li><a href="housingGuide">Housing Guide</a></li>
-		<li><a href="accountOptions">Account Options</a></li>
+		<li><a href="/home">Account Options</a></li>
+		<li><a href="login">Login</a></li>
 	</ul>
 	
 	<h2>{{title}}</h2>
 
 	<div>
-		<!-- <p>Scraper under construction. Your search will be run against this pre-populated list of facilities:</p><br> -->
+		<p>Form parsing has not been implemented, so this simply displays information on all facilities in the database.</p>
+		<p>As our scraper is still in development, the facilities shown are pre-populated sample data</p>
+
 		<table>
 			<thead>
-				<th>Name</th>
-				<th>Category</th>
-				<th>Street Address</th>
-				<th>ZIP</th>
-				<th>Phone Number</th>
+				<th style="border: 1px solid black;">Name</th>
+				<th style="border: 1px solid black;">Category</th>
+				<th style="border: 1px solid black;">Street Address</th>
+				<th style="border: 1px solid black;">ZIP</th>
+				<th style="border: 1px solid black;">Phone Number</th>
 			</thead>
 			<tbody>
 				{{#each results}}
 				<tr>
-					<td>{{this.name}}</td>
-					<td>{{this.category}}</td>
-					<td>{{this.address}}</td>
-					<td>{{this.zip}}</td>
-					<td>{{this.phone}}</td>
+					<td style="border: 1px solid black;">{{this.name}}</td>
+					<td style="border: 1px solid black;">{{this.category}}</td>
+					<td style="border: 1px solid black;">{{this.address}}</td>
+					<td style="border: 1px solid black;">{{this.zip}}</td>
+					<td style="border: 1px solid black;">{{this.phone}}</td>
 				</tr>
 				{{/each}}
 			</tbody>
