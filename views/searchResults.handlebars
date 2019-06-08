@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results Page</title>
+
+	<link rel="stylesheet" type="text/css" href="css/otherPages.css" />
+</head>
+<body>
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="search">Search</a></li>
+		<li><a href="housingGuide">Housing Guide</a></li>
+		<li><a href="accountOptions">Account Options</a></li>
+	</ul>
+	
+	<h2>{{title}}</h2>
+
+	<div>
+		<!-- <p>Scraper under construction. Your search will be run against this pre-populated list of facilities:</p><br> -->
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Category</th>
+				<th>Street Address</th>
+				<th>ZIP</th>
+				<th>Phone Number</th>
+			</thead>
+			<tbody>
+				{{#each results}}
+				<tr>
+					<td>{{this.name}}</td>
+					<td>{{this.category}}</td>
+					<td>{{this.address}}</td>
+					<td>{{this.zip}}</td>
+					<td>{{this.phone}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
