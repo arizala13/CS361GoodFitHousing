@@ -12,7 +12,7 @@
     "body-parser": "^1.13.3",
     "consolidate": "^0.15.1",
     "ejs": "^2.6.1",
-    "express": "^4.13.2",
+    "express": "^4.17.3",
     "express-fileupload": "^1.1.9",
     "express-handlebars": "^2.0.1",
     "express-session": "^1.11.3",
